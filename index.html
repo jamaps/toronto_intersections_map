@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Toronto Traffic Lights</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="icon" type="image/png" href="http://jamaps.github.io/icons/favicon.png" />
+    <meta name='author' content='Jeff Allen'/>
+    <meta name='description' content='map, toronto, traffic lights, intersections, transportation'/>
+
+
+
+    <style>
+        body { margin:0; padding:0;
+          min-width: 885px;
+        }
+
+        p {font-family: 'Arvo', serif;}
+
+        #top {
+          height: 75px;
+          background-color: white;
+          overflow: hidden;
+
+          border-bottom-style: solid;
+          border-bottom-width: 1px;
+          border-bottom-color: lightgrey;
+
+        }
+
+        div.title {
+          height: 75px;
+          width: 320px;
+          margin-left: 20px;
+          float: left;
+        }
+
+        div.miniline {
+          margin-top: -15px;
+          margin-bottom: -15px;
+          height: 1px;
+          width: 320px;
+          background-color: black;
+        }
+
+        #map {
+          /*position:absolute;*/
+          top:0;
+          bottom:0;
+          width:100%;
+          height: calc(100vh - 77px);
+        }
+
+        #info {
+            right: 10px;
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            width: 42px;
+            height: 42px;
+            background-color: white;
+            border: solid 2px;
+            border-color: lightgrey;
+            border-radius: 21px;
+            cursor: pointer;
+            opacity: 0.8;
+            text-align: center;
+        }
+
+        #info p {
+          font-size: 27px;
+          font-family: 'Arvo', serif;
+          margin-top: 4px;
+          color: black;
+        }
+
+        #info:hover {
+          opacity: 1;
+          background-color: #eaebec;
+        }
+
+        #show_info {
+          right: 10px;
+          position: absolute;
+          bottom: 0;
+          margin-bottom: 10px;
+          margin-left: 10px;
+          width: 270px;
+          height: 270px;
+          background-color: white;
+          border: solid 2px;
+          border-color: lightgrey;
+          border-radius: 21px;
+          opacity: 0;
+        }
+        #show_info p {
+          font-size: 12px;
+          color: black;
+          padding: 0px;
+          margin: 0px;
+          padding: 10px;
+        }
+
+        #button {
+          float: left;
+          width: 100px;
+          height: 42px;
+          background-color: white;
+          border: solid 1px;
+          border-color: black;
+          border-radius: 21px;
+          margin-top: 15px;
+          margin-left: 15px;
+          cursor: pointer;
+          opacity: 0.7;
+
+        }
+
+        #button p {
+          font-size: 14px;
+          text-align: center;
+          margin-top: 5px;
+
+
+        }
+
+        #button a {
+          font-size: 14px;
+          text-align: center;
+          margin-top: 5px;
+          text-decoration:none;
+          color: black;
+        }
+
+        #button:hover {
+          opacity: 1;
+          background-color: #a1dab4;
+        }
+
+        #button_small {
+          float: left;
+          width: 42px;
+          height: 42px;
+          background-color: white;
+          border: solid 1px;
+          border-color: black;
+          border-radius: 21px;
+          margin-top: 15px;
+          margin-left: 15px;
+          cursor: pointer;
+          opacity: 0.7;
+
+        }
+
+        #button_small p {
+          font-size: 14px;
+          text-align: center;
+          margin-top: 5px;
+
+
+        }
+
+        #button_small:hover {
+          opacity: 1;
+          background-color: #a1dab4;
+        }
+
+        #show_info #box {
+          margin-left: 10px;
+          margin-top: 10px;
+          height: 210px;
+          width: 250px;
+          background-color: white;
+        }
+
+        #show_info #att {
+          width: 210px;
+        }
+
+        #show_info #att p {
+          font-size: 10px;
+        }
+
+        #show_info #att a {
+          color: black;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<div id='top'>
+
+  <div class='title'>
+    <p><b><font size="4">Toronto</font></b></p>
+    <div class='miniline'></div>
+    <p>Signalized Intersections</p>
+  </div>
+
+  <div onclick='map_switch("year"); changeImage("h_year.svg");' id='button'>
+    <p>Year<br> Built</p>
+  </div>
+
+  <div onclick='map_switch("ped"); changeImage("h_ped.svg");' id='button'>
+    <p>Pedestrian<br> Volume</p>
+  </div>
+
+  <div onclick='map_switch("veh"); changeImage("h_veh.svg");' id='button'>
+    <p>Vehicle<br> Volume</p>
+  </div>
+
+  <div onclick='map_switch("og"); changeImage("h_n.svg");' id='button_small'>
+    <p>|<br>|</p>
+  </div>
+
+  <div id='button'>
+    <a href="inters.json" target="_blank"><p>Complete<br> Dataset</p></a>
+  </div>
+
+
+</div>
+
+<div id='map'></div>
+
+
+<div id="show_info" >
+
+  <div id="box">
+    <img id='hist' src="h_n.svg">
+  </div>
+
+  <div id="att">
+    <p>Designed by <a href="http://jamaps.github.io/" target="_blank">Jeff Allen</a> using <a href="https://www.mapbox.com/" target="_blank">Mapbox</a> and open data from the <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD" target="_blank">City of Toronto</a></p>
+  </div>
+
+</div>
+
+<div id='info' onclick="ShowDiv()"><p><b>i</b></p></div>
+
+
+<script src='inters.geojson'></script>
+<script src='map_code.js'></script>
+
+
+</body>
+</html>
