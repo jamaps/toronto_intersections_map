@@ -4,3 +4,5 @@ Check out the map here:
 https://jamaps.github.io/toronto_intersections_map/
 
 It was built using using [Mapbox GL JS](https://www.mapbox.com/mapbox-gl-js/api/) and  open data from the [City of Toronto](http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD)
+
+Questions? Comments? http://jamaps.github.io/
