@@ -5,4 +5,6 @@ https://jamaps.github.io/toronto_intersections_map/
 
 It was built using using [Mapbox GL JS](https://www.mapbox.com/mapbox-gl-js/api/) and  open data from the [City of Toronto](http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD)
 
+All code and images are CC BY-NC-CA: https://creativecommons.org/licenses/by-sa/3.0/
+
 Questions? Comments? http://jamaps.github.io/
