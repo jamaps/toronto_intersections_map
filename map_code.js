@@ -1,18 +1,4 @@
 
-// topo base map
-'mapbox://styles/jeffallen/cimic77ij0063qxno884ynu0h'
-
-// super dark no labels
-'mapbox://styles/jeffallen/cilzhgc78001wa0m461yacv10',
-
-// black smto
-'mapbox://styles/jeffallen/cisxt3qa0004c2xo4lo8bgl8z'
-
-// light grey / green / blue
-'mapbox://styles/jeffallen/cim5ll2q700k6a0m4rgvnqh36',
-
-// light light labels
-'mapbox://styles/jeffallen/ciywc3qdi00092snjcx40p1y5'
 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZmFsbGVuIiwiYSI6InJOdUR0a1kifQ.fTlTX02Ln0lwgaY4vkubSQ';
