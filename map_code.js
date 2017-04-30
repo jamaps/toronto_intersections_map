@@ -1,9 +1,3 @@
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 190d0bdecdd1227c12e49c84f8e40c536f58aebe
 mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZmFsbGVuIiwiYSI6InJOdUR0a1kifQ.fTlTX02Ln0lwgaY4vkubSQ';
 
 
