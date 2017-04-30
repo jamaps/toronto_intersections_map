@@ -17,5 +17,11 @@ https://jamaps.github.io/toronto_intersections_map/
 
 Built using using [Mapbox GL JS](https://www.mapbox.com/mapbox-gl-js/api/), some JS, and a couple lines of R.
 
+<<<<<<< HEAD
 Data comes from the [City of Toronto
 s](http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD) open data portal. The traffic
+=======
+All code and images are CC BY-NC-SA: https://creativecommons.org/licenses/by-nc-sa/3.0/
+
+Questions? Comments? http://jamaps.github.io/
+>>>>>>> 190d0bdecdd1227c12e49c84f8e40c536f58aebe
