@@ -1,24 +1,8 @@
 
-// topo base map
-'mapbox://styles/jeffallen/cimic77ij0063qxno884ynu0h'
-
-// super dark no labels
-'mapbox://styles/jeffallen/cilzhgc78001wa0m461yacv10',
-
-// black smto
-'mapbox://styles/jeffallen/cisxt3qa0004c2xo4lo8bgl8z'
-
-// light grey / green / blue
-'mapbox://styles/jeffallen/cim5ll2q700k6a0m4rgvnqh36',
-
-// light light labels
-'mapbox://styles/jeffallen/ciywc3qdi00092snjcx40p1y5'
-
-
 mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZmFsbGVuIiwiYSI6InJOdUR0a1kifQ.fTlTX02Ln0lwgaY4vkubSQ';
 
 
-var x = 1;
+var x = 0;
 function ShowDiv() {
     if (x == 0) {
       document.getElementById("show_info").style.opacity = 0
@@ -49,10 +33,10 @@ var map = new mapboxgl.Map({
 });
 
 // colours !!!!
-var vcol = ['#fef0d9','#fdcc8a','#fc8d59','#d7301f']
+// var vcol = ['#fef0d9','#fdcc8a','#fc8d59','#d7301f']
+var vcol = ['#fef0d9','#fdc88a','#d84838','#3d0600']
 var pcol = ['#ffffcc','#a1dab4','#41b6c4','#225ea8']
 var ycol = ['#ae017e','#f768a1','#fbb4b9','#feebe2']
-
 // var ycol = ['#810f7c','#8856a7','#8c96c6','#b3cde3']
 
 

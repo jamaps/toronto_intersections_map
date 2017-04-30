@@ -26,18 +26,18 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="38.351097"
+     inkscape:cx="118.3511"
      inkscape:cy="134.57293"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
+     showgrid="false"
      units="px"
      inkscape:snap-grids="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1056"
-     inkscape:window-x="0"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1">
+     inkscape:window-width="1414"
+     inkscape:window-height="909"
+     inkscape:window-x="506"
+     inkscape:window-y="143"
+     inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
        id="grid4136" />
@@ -50,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -99,7 +99,7 @@
          x="58.465908"
          y="1040.8517">8hr Vehicle Volume</tspan></text>
     <rect
-       style="fill:#fdcc8a;fill-opacity:1;stroke:#565656;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#fdc88a;fill-opacity:1;stroke:#565656;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4189"
        width="50"
        height="15"
@@ -113,14 +113,14 @@
        x="17.625"
        y="992.38037" />
     <rect
-       style="fill:#fc8d59;fill-opacity:1;stroke:#565656;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#d84838;fill-opacity:1;stroke:#565656;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4195"
        width="50"
        height="15"
        x="127.625"
        y="992.38037" />
     <rect
-       style="fill:#d7301f;fill-opacity:1;stroke:#565656;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#3d0600;fill-opacity:1;stroke:#565656;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4197"
        width="50"
        height="15"
