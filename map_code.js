@@ -1,12 +1,14 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZmFsbGVuIiwiYSI6InJOdUR0a1kifQ.fTlTX02Ln0lwgaY4vkubSQ';
 
 
 var x = 0;
+
 function ShowDiv() {
     if (x == 0) {
+        
       document.getElementById("show_info").style.opacity = 0
       x = 1;
     } else {
+        
       document.getElementById("show_info").style.opacity = 0.95;
       x = 0;
     }
@@ -16,7 +18,7 @@ function ShowDiv() {
 var sw = new mapboxgl.LngLat(-80.27, 43.32);
 var ne = new mapboxgl.LngLat(-78.67, 44.12);
 var boundBox = new mapboxgl.LngLatBounds(sw, ne);
-
+mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZmFsbGVuIiwiYSI6ImNqaGlnOHZkODIzb2UzOGw4MmNvaTY1cnEifQ.EzcwmMSTC_vL90m7Bd3XAg';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/jeffallen/ciywc3qdi00092snjcx40p1y5',
